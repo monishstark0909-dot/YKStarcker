@@ -17,8 +17,6 @@
 		"paths": {
 			"@yks/shared": ["packages/shared/src/index.ts"],
 			"@yks/shared/*": ["packages/shared/src/*"],
-			"@yks/database": ["packages/database/src/index.ts"],
-			"@yks/database/*": ["packages/database/src/*"]
 		}
 	}
 }
