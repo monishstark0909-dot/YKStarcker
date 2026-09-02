@@ -13,5 +13,5 @@ services:
         sync: false
       - key: JWT_REFRESH_SECRET
         sync: false
-        - key: NODE_ENV
-          value: production
+      - key: NODE_ENV
+        value: production
