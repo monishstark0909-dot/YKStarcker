@@ -1,0 +1,57 @@
+/** @format */
+import {
+	DEFAULT_AI_CACHE_TTL_MS,
+	DEFAULT_AI_RATE_LIMIT,
+	DEFAULT_AI_RATE_WINDOW_MS,
+	DEFAULT_AI_WEEKLY_CACHE_TTL_MS,
+	DEFAULT_OPENROUTER_BACKOFF_MS,
+	DEFAULT_OPENROUTER_CIRCUIT_COOLDOWN_MS,
+	DEFAULT_OPENROUTER_CIRCUIT_FAILURE_THRESHOLD,
+	DEFAULT_OPENROUTER_MAX_RETRIES,
+	DEFAULT_OPENROUTER_MODEL,
+	DEFAULT_OPENROUTER_TIMEOUT_MS,
+} from "./ai.constants";
+
+function parsePositiveInt(value: string | undefined, fallback: number) {
+	const parsed = Number(value);
+	return Number.isFinite(parsed) && parsed > 0 ? parsed : fallback;
+}
+
+export const OPENROUTER_MODEL =
+	process.env.OPENROUTER_MODEL || DEFAULT_OPENROUTER_MODEL;
+export const OPENROUTER_TIMEOUT_MS = parsePositiveInt(
+	process.env.OPENROUTER_TIMEOUT,
+	DEFAULT_OPENROUTER_TIMEOUT_MS,
+);
+export const OPENROUTER_MAX_RETRIES = parsePositiveInt(
+	process.env.OPENROUTER_MAX_RETRIES,
+	DEFAULT_OPENROUTER_MAX_RETRIES,
+);
+export const OPENROUTER_BACKOFF_MS = parsePositiveInt(
+	process.env.OPENROUTER_BACKOFF_MS,
+	DEFAULT_OPENROUTER_BACKOFF_MS,
+);
+export const OPENROUTER_CIRCUIT_FAILURE_THRESHOLD = parsePositiveInt(
+	process.env.OPENROUTER_CIRCUIT_FAILURE_THRESHOLD,
+	DEFAULT_OPENROUTER_CIRCUIT_FAILURE_THRESHOLD,
+);
+export const OPENROUTER_CIRCUIT_COOLDOWN_MS = parsePositiveInt(
+	process.env.OPENROUTER_CIRCUIT_COOLDOWN_MS,
+	DEFAULT_OPENROUTER_CIRCUIT_COOLDOWN_MS,
+);
+export const AI_CACHE_TTL_MS = parsePositiveInt(
+	process.env.AI_CACHE_TTL,
+	DEFAULT_AI_CACHE_TTL_MS,
+);
+export const AI_WEEKLY_CACHE_TTL_MS = parsePositiveInt(
+	process.env.AI_WEEKLY_CACHE_TTL,
+	DEFAULT_AI_WEEKLY_CACHE_TTL_MS,
+);
+export const AI_RATE_LIMIT = parsePositiveInt(
+	process.env.AI_RATE_LIMIT,
+	DEFAULT_AI_RATE_LIMIT,
+);
+export const AI_RATE_WINDOW_MS = parsePositiveInt(
+	process.env.AI_RATE_WINDOW,
+	DEFAULT_AI_RATE_WINDOW_MS,
+);

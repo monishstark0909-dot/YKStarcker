@@ -1,0 +1,27 @@
+{
+	"name": "@yks/database",
+	"private": true,
+	"version": "0.1.0",
+	"main": "src/index.ts",
+	"types": "src/index.ts",
+	"scripts": {
+		"generate": "prisma generate",
+		"migrate:dev": "prisma migrate dev",
+		"migrate:deploy": "prisma migrate deploy",
+		"seed": "tsx prisma/seed.ts",
+		"typecheck": "tsc --noEmit"
+	},
+	"prisma": {
+		"seed": "tsx prisma/seed.ts"
+	},
+	"dependencies": {
+		"@prisma/client": "^6.10.1"
+	},
+	"devDependencies": {
+		"@embedded-postgres/windows-x64": "^18.4.0-beta.17",
+		"embedded-postgres": "^18.4.0-beta.17",
+		"prisma": "^6.10.1",
+		"tsx": "^4.19.2",
+		"typescript": "^5.6.3"
+	}
+}

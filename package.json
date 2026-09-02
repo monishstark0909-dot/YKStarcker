@@ -1,0 +1,33 @@
+{
+	"name": "yks-study-tracker",
+	"private": true,
+	"version": "0.1.0",
+	"workspaces": [
+		"apps/*",
+		"packages/*"
+	],
+	"scripts": {
+		"dev": "node scripts/dev.js",
+		"dev:web": "npm run dev --workspace @yks/web",
+		"dev:api": "npm run start:dev --workspace @yks/api",
+		"build:web": "npm run build --workspace @yks/web",
+		"build:api": "npm run build --workspace @yks/api",
+		"db:generate": "npm run generate --workspace @yks/database",
+		"db:migrate:dev": "npm run migrate:dev --workspace @yks/database",
+		"db:migrate:deploy": "npm run migrate:deploy --workspace @yks/database",
+		"db:seed": "npm run seed --workspace @yks/database",
+		"db:typecheck": "npm run typecheck --workspace @yks/database",
+		"test:api:auth": "npm run test:auth --workspace @yks/api",
+		"typecheck:web": "npm run typecheck --workspace @yks/web",
+		"typecheck:api": "npm run typecheck --workspace @yks/api"
+	},
+	"devDependencies": {
+		"@types/jest": "^30.0.0",
+		"concurrently": "^9.2.4"
+	},
+	"dependencies": {
+		"@nestjs/schedule": "^3.0.4",
+		"@nestjs/testing": "^10.4.5",
+		"zod": "^4.4.3"
+	}
+}
