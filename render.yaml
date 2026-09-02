@@ -3,7 +3,7 @@ services:
     name: yks-tracker-api
     runtime: node
     plan: free
-    buildCommand: npm ci && npm run db:generate && npm run build:api
+    buildCommand: npm ci --include=dev && npm run db:generate && npm run build:api
     startCommand: npm run start:prod --workspace @yks/api
     healthCheckPath: /api/health
     envVars:
