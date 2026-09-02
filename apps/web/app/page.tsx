@@ -96,6 +96,7 @@ export default function HomePage() {
 
 			{/* Main Split-Screen Hero Section */}
 			<main
+				className='marketing-main'
 				style={{
 					flex: 1,
 					maxWidth: "1280px",
@@ -192,7 +193,7 @@ export default function HomePage() {
 					</div>
 
 					{/* Small Feature Check List */}
-					<div
+					<div className='marketing-feature-grid'
 						style={{
 							display: "grid",
 							gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",

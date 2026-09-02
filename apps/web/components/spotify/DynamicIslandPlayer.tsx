@@ -125,6 +125,7 @@ export function DynamicIslandPlayer() {
 			
 			{/* Expanded Popup Player (Stays permanently mounted in DOM to prevent hover out audio stop) */}
 			<div
+				className='spotify-player-panel'
 				style={{
 					display: isVisible ? "block" : "none",
 					width: "385px",

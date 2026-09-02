@@ -409,7 +409,7 @@ export default function SubjectsPage() {
 
 	return (
 		<div className='stack' style={{ gap: "24px", minHeight: "calc(100vh - 120px)" }}>
-			<div style={{ display: "grid", gridTemplateColumns: "280px 1fr 340px", gap: "20px", alignItems: "stretch" }}>
+			<div className='responsive-subject-layout' style={{ display: "grid", gridTemplateColumns: "280px 1fr 340px", gap: "20px", alignItems: "stretch" }}>
 				
 				{/* COLUMN 1: Subject List Explorer */}
 				<div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>

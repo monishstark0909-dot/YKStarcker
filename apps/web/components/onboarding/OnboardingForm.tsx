@@ -179,7 +179,7 @@ export function OnboardingForm() {
 				<form className='form' onSubmit={handleSubmit} style={{ gap: "20px" }}>
 					{/* STEP 1: Academic Profile */}
 					{step === 1 && (
-						<div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px", alignItems: "start" }}>
+						<div className='responsive-form-grid' style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px", alignItems: "start" }}>
 							<label className='field' style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
 								<span style={{ fontSize: "0.85rem", fontWeight: 600, color: "#18181b" }}>{t("onboarding.exam_type")}</span>
 								<select
@@ -222,7 +222,7 @@ export function OnboardingForm() {
 					{/* STEP 2: Goal Selection */}
 					{step === 2 && (
 						<div className='stack' style={{ gap: "20px" }}>
-							<div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px", alignItems: "start" }}>
+							<div className='responsive-form-grid' style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px", alignItems: "start" }}>
 								<Input
 									label={t("onboarding.target_uni")}
 									name='targetUniversity'
@@ -239,7 +239,7 @@ export function OnboardingForm() {
 									placeholder='Computer Engineering'
 								/>
 							</div>
-							<div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px", alignItems: "start" }}>
+							<div className='responsive-form-grid' style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px", alignItems: "start" }}>
 								<Input
 									label={t("onboarding.target_rank")}
 									name='targetRanking'
@@ -257,7 +257,7 @@ export function OnboardingForm() {
 					{/* STEP 3: Daily Targets */}
 					{step === 3 && (
 						<div className='stack' style={{ gap: "20px" }}>
-							<div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px", alignItems: "start" }}>
+							<div className='responsive-form-grid' style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px", alignItems: "start" }}>
 								<Input
 									label={t("onboarding.daily_study_goal")}
 									name='dailyStudyGoalMinutes'
@@ -281,7 +281,7 @@ export function OnboardingForm() {
 									placeholder='160'
 								/>
 							</div>
-							<div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px", alignItems: "start" }}>
+							<div className='responsive-form-grid' style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px", alignItems: "start" }}>
 								<label className='field' style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
 									<span style={{ fontSize: "0.85rem", fontWeight: 600, color: "#18181b" }}>{t("onboarding.pref_study_time")}</span>
 									<select
