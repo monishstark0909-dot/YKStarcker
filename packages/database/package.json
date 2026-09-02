@@ -2,9 +2,10 @@
 	"name": "@yks/database",
 	"private": true,
 	"version": "0.1.0",
-	"main": "src/index.ts",
-	"types": "src/index.ts",
+	"main": "dist/src/index.js",
+	"types": "dist/src/index.d.ts",
 	"scripts": {
+		"build": "tsc",
 		"generate": "prisma generate",
 		"migrate:dev": "prisma migrate dev",
 		"migrate:deploy": "prisma migrate deploy",
